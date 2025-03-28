@@ -1,0 +1,25 @@
+package com.vishnu.aftd;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class EmployeeService {
+	
+	@Autowired
+	private EmployeeRepository employeeRepository;
+	
+	@SuppressWarnings("unchecked")
+	public List<Employee> getAllEmployees(){
+		return (List<Employee>) employeeRepository.findAll();
+	}
+	
+	public Employee getEmployee(Long id) {
+		return employeeRepository.findById(id);
+	}
+	
+	
+
+}
