@@ -1,5 +1,0 @@
-package com.vishnu.aftd;
-
-public interface EmployeeRepository {
-
-}
